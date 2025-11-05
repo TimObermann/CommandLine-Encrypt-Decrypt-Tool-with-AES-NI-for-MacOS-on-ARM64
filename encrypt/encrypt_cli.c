@@ -12,7 +12,7 @@
 #include "../include/util.h"
 
 
-#define HELP_STRING "\nThe Encryption Tool allows you to encrypt literals, files, and directories:\n\nencrypt [-flags]\n\nPossible flags:\n-l <literal> -- provide a literal to encrypt\n-f <path_to_file> -- provide a file to encrypt\n-r <path_to_directory> -- provide a directory to recursively encrypt\n-u -- sets a flag for a directory to be encrypted into a single file output\n-d <path_to_directory/file> -- sets the target\n-k <literal> -- provide a key literal for encryption\n-g -- randomly generate a key for the encryption\n-p <path_to_file> -- provide a key.secret file that contains the secret key to use in the encryption\n\n@Tim Obermann"
+#define HELP_STRING "\nThe Encryption Tool allows you to encrypt literals, files, and directories:\n\nencrypt [-flags]\n\nPossible flags:\n-l <literal> -- provide a literal to encrypt\n-f <path_to_file> -- provide a file to encrypt\n-r <path_to_directory> -- provide a directory to recursively encrypt\n-d <path_to_directory/file> -- sets the target\n-k <literal> -- provide a key literal for encryption\n-g -- randomly generate a key for the encryption\n-p <path_to_file> -- provide a key.secret file, in the same directory, that contains the secret key to use in the encryption\n\n@Tim Obermann"
 
 void freeAllNotNull(char* source_filename, char* destination_filename, char* literal, uint32_t* secret_key) {
     if (source_filename != NULL) free(source_filename);

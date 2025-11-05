@@ -14,7 +14,7 @@
 #include "../include/sha256.h"
 #include "../include/util.h"
 
-#define HELP_STRING ""
+#define HELP_STRING "\nThe Decryption Tool allows you to decrypt literals, files, and directories:\n\ndecrypt [-flags]\n\nPossible flags:\n-l <literal> -- provide a literal to decrypt\n-f <path_to_file> -- provide a file to decrypt\n-r <path_to_directory> -- provide a directory to recursively decrypt\n-d <path_to_directory/file> -- sets the target\n-k <literal> -- provide a key literal for decryption\n-g -- randomly generate a key for the decryption\n-p <path_to_file> -- provide a key.secret file, in the same directory, that contains the secret key to use in the decryption\n\n@Tim Obermann"
 
 void freeAllNotNull(char* source_filename, char* destination_filename, char* literal, uint32_t* secret_key) {
     if (source_filename != NULL) free(source_filename);
